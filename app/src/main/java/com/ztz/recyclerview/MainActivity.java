@@ -1,5 +1,6 @@
 package com.ztz.recyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import com.liaoinstan.springview.container.DefaultFooter;
 import com.liaoinstan.springview.container.DefaultHeader;
 import com.liaoinstan.springview.widget.SpringView;
+import com.ztz.recyclerview.activity.ShopCartActivity;
 import com.ztz.recyclerview.adapter.MyreyAdapter;
 import com.ztz.recyclerview.bean.MusicBean;
 import com.ztz.recyclerview.presenter.RecyPresenter;
@@ -19,7 +21,7 @@ import com.ztz.recyclerview.view.RecyViewCallBack;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements RecyViewCallBack{
+public class MainActivity extends AppCompatActivity implements RecyViewCallBack {
 
     private SpringView spring_view;
     private RecyclerView recycler_view;
@@ -71,12 +73,13 @@ public class MainActivity extends AppCompatActivity implements RecyViewCallBack{
                 adapter.notifyDataSetChanged();
             }
         });
-        //recyclerview的条目点击事件---点击按钮跳转到购物车
+        //recyclerview的条目点击事件----点击跳转到购物车
         adapter.setItemOnClickListener(new MyreyAdapter.MyItemOnClickListener() {
             @Override
             public void onItemOnClick(View view, int postion) {
                 Toast.makeText(MainActivity.this,"点击了item",Toast.LENGTH_SHORT).show();
-
+                //跳转
+               startActivity(new Intent(MainActivity.this, ShopCartActivity.class));
             }
         });
 

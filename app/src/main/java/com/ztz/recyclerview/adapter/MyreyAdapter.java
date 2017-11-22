@@ -82,7 +82,4 @@ public class MyreyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public interface MyItemOnClickListener {
         void onItemOnClick(View view,int postion);
     }
-
-
-
 }

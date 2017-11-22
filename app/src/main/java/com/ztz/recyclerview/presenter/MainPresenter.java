@@ -1,6 +1,5 @@
 package com.ztz.recyclerview.presenter;
 
-
 import com.ztz.recyclerview.activity.ShopCartActivity;
 import com.ztz.recyclerview.bean.ShopBean;
 import com.ztz.recyclerview.model.MainModel;

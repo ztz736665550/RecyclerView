@@ -22,7 +22,6 @@ import com.ztz.recyclerview.view.RecyViewCallBack;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements RecyViewCallBack {
-
     private SpringView spring_view;
     private RecyclerView recycler_view;
     private RecyPresenter presenter;
@@ -77,9 +76,9 @@ public class MainActivity extends AppCompatActivity implements RecyViewCallBack 
         adapter.setItemOnClickListener(new MyreyAdapter.MyItemOnClickListener() {
             @Override
             public void onItemOnClick(View view, int postion) {
-                Toast.makeText(MainActivity.this,"点击了item",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"点击了item"+postion,Toast.LENGTH_SHORT).show();
                 //跳转
-               startActivity(new Intent(MainActivity.this, ShopCartActivity.class));
+                startActivity(new Intent(MainActivity.this, ShopCartActivity.class));
             }
         });
 

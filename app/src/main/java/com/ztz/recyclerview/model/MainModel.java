@@ -1,6 +1,5 @@
 package com.ztz.recyclerview.model;
 
-
 import com.ztz.recyclerview.bean.ShopBean;
 import com.ztz.recyclerview.okhttp.AbstractUiCallBack;
 import com.ztz.recyclerview.okhttp.OkhttpUtils;
@@ -10,6 +9,7 @@ import com.ztz.recyclerview.okhttp.OkhttpUtils;
  */
 
 public class MainModel {
+
     public void getData(final MainModelCallBack callBack){
 
         OkhttpUtils.getInstance().asy(null, "http://120.27.23.105/product/getCarts?uid=100", new AbstractUiCallBack<ShopBean>() {
@@ -18,7 +18,6 @@ public class MainModel {
 
                 callBack.success(bean);
             }
-
             @Override
             public void failure(Exception e) {
 
